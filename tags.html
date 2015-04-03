@@ -1,25 +1,35 @@
 ---
+title: Tags
 layout: page
-title: 标签
-header: 根据标签快速导航到相应的文章
-group: navigation
+permalink: /tags/
 ---
-{% include JB/setup %}
 
-<ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
+<div id='tag_cloud'>
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+    {% endfor %}
+</div>
+
+<ul class="listing">
+    {% for tag in site.tags %}
+    <li class="listing-seperator" id="{{ tag[0] }}">{{ tag[0] }}</li>
+    {% for post in tag[1] %}
+    <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+    {% endfor %}
 </ul>
 
-<div class = "card">
-{% for tag in site.tags %} 
+<script src="/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+size: {start: 1, end: 1, unit: 'em'},
+      color: {start: '#f8e0e6', end: '#ff3333'}
+};
 
-  <h3 id="{{ tag[0] }}-ref">{{ tag[0] }}</h3>
-  <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-
-
-{% endfor %}
-</div>
+$(function () {
+        $('#tag_cloud a').tagcloud();
+        });
+</script>

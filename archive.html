@@ -1,12 +1,18 @@
 ---
-layout: page
-title : 文章
-header : 所有文章
-group: navigation
+layout: category
+title: Archive
+permalink: /archive/
 ---
-{% include JB/setup %}
-
-{% assign posts_collate = site.posts %}
-<div class="page card">
-{% include JB/posts_collate %}
-</div>
+<ul class="posts">
+    {% for post in site.posts %}
+    {% capture m %}{{post.date | date:"%m"}}{% endcapture %}
+    {% if month != m %}
+    {% assign month = m %}
+    <li class="listing-seperator">{{ post.date | date:"%Y-%m" }}</li>
+    {% endif %}
+    <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
