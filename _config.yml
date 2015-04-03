@@ -1,36 +1,40 @@
-# Site wide configuration
+# Site settings
+title: Hackerxu's Blog
+email: 468137306@qq.com
+description: "Python,HTML,CSS,Machine Leaning"
+permalink: /:year/:month/:day/:title.html
+baseurl: ""
+url: "http://hackerxu.com"
+atom-baseurl: "http://hackerxu.com"
+author: "xuxiao"
 
-title:
-description:
-logo: # 120x120 px default image used for Twitter summary card
-teaser: # 400x250 px default teaser image used in image archive grid
-locale:
-url:
+# Build settings
+# permalink: date
 
-# Jekyll configuration
-
-sass:
-    sass_dir: _sass
-    style: compressed
-permalink: /:categories/:title/
-kramdown:
-  toc_levels: 1..2
 highlighter: pygments
-gems:
-  - jekyll-sitemap
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,no_intra_emphasis,strikethrough,no_intra_emphasis,autolink,tables]
 
+#duoshuo
+  comments :
+    provider : duoshuo
+    duoshuo :
+      short_name : taizilongxu
 
-# Site owner
-owner:
-  name:
-  email:
-  twitter:
-  google:
-    ad-client: 
-    ad-slot: 
-  bio: 
-  avatar: bio-photo.jpg # 160x160 px image for author byline
-disqus-shortname:
-
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+navigations:
+  - title: About
+    class: fa fa-list-ul
+    href: /about/
+  - title: Archive
+    class: fa fa-tags
+    href: /archive/
+  - title: Categories
+    class: fa fa-user
+    href: /categories/
+  - title: Tags
+    class: fa fa-film
+    href: /tags/
+  - title: Rss
+    class: fa fa-rss
+    href: /atom.xml
