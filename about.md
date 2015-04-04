@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+我要做码农！！！
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+13年毕业于南京大学，目前就读于上海技术物理研究所
+曾经疯狂热爱dota。
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[675839352@qq.com](mailto:675839352@qq.com)
