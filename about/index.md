@@ -1,44 +1,34 @@
-﻿---
-title: 关于
+---
 layout: page
-comments: no
-
+title: About the Jekyll Theme
+image:
+  feature: abstract-5.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+comments: false
+modified: 2014-12-24
 ---
-在读硕士生，专业微电子与电子学。下半年决定跨行去做码农。
- 
 
----
+They say three times the charm, so here is another free responsive Jekyll blog theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. 
 
-###联系方式：
+If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
 
-{% if site.qq %}
-ＱＱ：[{{ site.qq }}](tencent://message/?uin={{ site.qq }})
-{% endif %}
-网站：[{{ site.name }}]({{ site.url }})
+## What HPSTR brings to the table:
 
-邮箱：[{{ site.email }}](mailto:{{ site.email }})
+* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
+* Gracefully degrads in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
+* Modern and minimal design.
+* Sweet animated menu.
+* Background image support.
+* Readable typography to make your words shine.
+* Support for large images to call out your favorite posts.
+* Built-in support for Sass courtesy of Jekyll 2.x.
+* Optional [Disqus](http://disqus.com) comments.
+* Simple and clear permalink structure[^1].
+* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
+* Simple [custom 404 page]({{ site.url }}/404.html) to get you started.
+* Stylesheets for Pygments and Coderay [syntax highlighting]({{ site.url }}/code-highlighting-post/) to make your code examples look snazzy.
 
-GitHub : [http://github.com/{{ site.github }}](http://github.com/{{ site.github }})
+<div markdown="0"><a href="{{ site.url }}/theme-setup/" class="btn btn-info">Theme Setup</a> <a href="https://github.com/mmistakes/hpstr-jekyll-theme" class="btn btn-success">Download HPSTR</a></div>
 
-----
-
-
-本博客clone自[webfrog](https://github.com/webfrogs/webfrogs.github.com)，在此非常感谢这个简洁漂亮的主题。
-
-**添加功能**:
-
-'Powered by Jekyll @ GitHub'中'Po'为post，'ed'为edit。 
-
----var [Yonsm](http://yonsm.net/)
-
-post右边自动生成post的大纲，浮在post页面左边。
-
-vim风格的按键，j为上一篇，k下一篇。  
-
----via [mad4a](http://mad4a.me/)
-
-----
-
-
-
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/{{ site.weibo }}/d643d182/7.png)](http://weibo.com/u/{{ site.weibo }})
+[^1]: Example: *domain.com/category-name/post-title*
