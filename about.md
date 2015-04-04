@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+在读研究生一枚，决定跨行做码农。（苦逼也很快乐）
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+本科：南京大学匡亚明学院
+
+研究生：中科院上海技术物理研究所
 
 ### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+675839352@qq.com
